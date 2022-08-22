@@ -1,0 +1,88 @@
+@import "./definitions.css";
+
+.decoration-card {
+  /*background: radial-gradient(
+    109.56% 109.56% at 0% -2.94%,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(179, 246, 255, 0.5) 100%
+  );*/
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+  background-color: var(--color-milk);
+  /*backdrop-filter: blur(0.4rem);*/
+  border-radius: 1rem;
+  border: 0.1rem solid var(--color-silver);
+  /*background-repeat: no-repeat;
+  background-position: center center;*/
+  /*cursor: pointer;*/
+}
+
+.decoration-active-card {
+  border: 0.1rem solid var(--color-white);
+}
+
+.tree-card {
+  width: 13rem;
+  height: 13rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  /* background-size: contain;*/
+}
+
+.tree-card-image {
+  height: 100%;
+  border-radius: 1rem;
+}
+
+.background-card {
+  width: 8rem;
+  height: 8rem;
+  cursor: pointer;
+  /* background-size: cover;*/
+}
+
+.backgroung-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+}
+
+.toy-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 8rem;
+  height: 8rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.toy-card-image {
+  height: 80%;
+  border-radius: 1rem;
+}
+
+.decoration-card-count-wrapper {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  border-top-left-radius: 50%;
+  background-color: var(--color-tree-green);
+}
+
+.decoration-card-count {
+  position: absolute;
+  font-family: Neicha;
+  width: 2rem;
+  text-align: center;
+  font-size: 2rem;
+  color: var(--color-white);
+}
+
+.no-drop {
+  cursor: no-drop;
+}

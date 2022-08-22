@@ -1,0 +1,37 @@
+@import "./definitions.css";
+
+.footer {
+  position: relative;
+  /*top: 7rem;*/
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  padding: 1.5rem;
+  border-top: 0.1 solid var(--color-grey);
+  background-color: var(--color-black);
+  text-transform: none;
+}
+
+.li-footer {
+  list-style: none;
+  text-align: center;
+  width: 30vw;
+}
+
+.footer-link {
+  text-decoration: none;
+}
+
+.footer-link:link {
+  color: var(--color-white);
+}
+
+.footer-link:hover {
+  color: var(--color-tree-greene);
+}
+
+.footer-link:visited {
+  color: var(--color-white);
+}

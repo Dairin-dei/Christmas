@@ -1,0 +1,137 @@
+@import "./definitions.css";
+
+.card {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  width: 30rem;
+  height: 28rem;
+  margin: 1rem;
+  padding: 1rem;
+
+  background-color: var(--color-back-transparent);
+  color: var(--color-white);
+
+  border: 0.1rem solid var(--color-tree-green);
+  border-radius: 1rem;
+
+  text-transform: none;
+
+  cursor: pointer;
+}
+
+.card-title {
+  width: 100%;
+  margin-top: 0;
+  font-size: 2rem;
+  text-align: center;
+  text-transform: none;
+  line-height: 2.2rem;
+  font-weight: 700;
+}
+
+.card-image {
+  margin-top: -2rem;
+  width: 9rem;
+  height: 11.2rem;
+  object-fit: contain;
+}
+
+.description {
+  margin-top: -2rem;
+  line-height: 2;
+}
+
+.card-description {
+  margin: 0;
+  font-size: 1.8rem;
+  text-transform: none;
+  font-weight: 400;
+}
+
+.card-ribbon {
+  position: absolute;
+  top: 16.5rem;
+  left: 2.5rem;
+  width: 6rem;
+  height: 8rem;
+  background-image: url("../assets/svg/ribbon.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  filter: opacity(30%);
+}
+
+.card-active {
+  border: 0.1rem solid var(--color-silver);
+}
+.ribbon-active {
+  filter: invert(50%) sepia(50%) saturate(5%) hue-rotate(80deg) brightness(100%)
+    contrast(400%);
+}
+
+@media (max-width: 1470px) {
+  .card {
+    width: 25rem;
+    height: 22rem;
+    margin: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  .card-title {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    font-weight: 700;
+  }
+
+  .card-image {
+    margin-top: -2rem;
+    width: 7rem;
+    height: 9rem;
+    object-fit: contain;
+  }
+
+  .description {
+    line-height: 1.5;
+  }
+
+  .card-ribbon {
+    top: 14.5rem;
+    width: 4rem;
+    height: 5.5rem;
+  }
+}
+
+@media (max-width: 1170px) {
+  .card {
+    width: 23rem;
+    height: 20rem;
+  }
+
+  .card-title {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    font-weight: 400;
+  }
+
+  .card-image {
+    margin-top: -2rem;
+    width: 5rem;
+    height: 7rem;
+    object-fit: contain;
+  }
+
+  .card-description {
+    line-height: 1.1;
+    font-size: 1.6rem;
+    font-weight: 200;
+  }
+
+  .card-ribbon {
+    top: 14rem;
+    left: 1rem;
+  }
+}

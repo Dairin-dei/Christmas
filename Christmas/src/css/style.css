@@ -1,0 +1,90 @@
+@import "./definitions.css";
+@import "./start.css";
+@import "./card.css";
+@import "./footer.css";
+@import "./header.css";
+@import "./ornaments.css";
+@import "./popup.css";
+@import "./treePage.css";
+@import "./tree.css";
+@import "./decorationCard.css";
+@import "./lights.css";
+@import "./snowflakes.css";
+
+body {
+  box-sizing: border-box;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Open Sans";
+  color: white;
+  text-transform: uppercase;
+  margin: 0;
+  overflow: hidden;
+}
+
+.main {
+  position: relative;
+  min-height: calc(100vh - 7rem);
+  background-image: url(../assets/backgroundg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hidden {
+  display: none;
+}
+
+.wrapper-horizontal {
+  display: flex;
+  align-items: center;
+}
+
+.wrapper-vertical {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.vertical-start {
+  align-items: flex-start;
+}
+
+.h2 {
+  font-family: Neicha;
+  font-size: 2.5rem;
+  color: var(--color-white);
+  font-weight: 400;
+  line-height: 4rem;
+}
+
+.h3 {
+  font-family: Neicha;
+  font-size: 2rem;
+  color: var(--color-white);
+  font-weight: 200;
+  line-height: 4rem;
+}
+
+.h4 {
+  font-size: 2rem;
+  color: var(--color-white);
+  text-transform: none;
+  font-weight: 200;
+  padding-right: 2rem;
+}
+
+@media (max-width: 1470px) {
+  .h3,
+  .h4 {
+    margin: 1rem;
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 1170px) {
+  .h3,
+  .h4 {
+    font-size: 1.6rem;
+  }
+}

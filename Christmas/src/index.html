@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Christmas-task</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="icon" href="./assets/favicon.ico" />
+  </head>
+  <body>
+    <h1 class="hidden">Christmas-task</h1>
+    <header class="header section hidden">
+      <nav class="nav">
+        <a href="#" class="button-home"><div class="logo"></div></a>
+        <a href="#" class="button button-ornaments">Игрушки</a>
+        <a href="#" class="button-page button button-tree">Ёлка</a>
+      </nav>
+      <div class="wrapper-horizontal">
+        <input
+          class="input-search"
+          type="search"
+          name="search_ornaments"
+          placeholder="Поиск"
+          id="input-search"
+          autofocus
+        />
+      </div>
+      <div class="chosen">
+        <span class="chosen-span">0</span>
+      </div>
+      <div class="fun">
+        <button class="button-sound"></button>
+        <button class="button-snow hidden">❆</button>
+      </div>
+    </header>
+    <main class="main">
+      <section class="start-page section">
+        <div class="ball-1"></div>
+        <div class="ball-2"></div>
+        <div class="wrapper-vertical">
+          <div class="heading">
+            <h2 class="h2">Поможем бабушке нарядить елку!</h2>
+          </div>
+          <button class="button-start">Давай играть!</button>
+        </div>
+      </section>
+
+      <section class="ornaments-page section hidden">
+        <div class="blur wrapper-horizontal vertical-start">
+          <div class="parameters-section">
+            <div class="sorting-settings wrapper-horizontal">
+              <h3 class="h3">Сортировка</h3>
+              <select name="sorting" id="sorting" class="sorting">
+                <option value="NAME_AZ">По названию (а-я)</option>
+                <option value="NAME_ZA">По названию (я-а)</option>
+                <option value="AMOUNT_MIN_MAX">По году (возрастанию)</option>
+                <option value="AMOUNT_MAX_MIN">По году (убыванию)</option>
+              </select>
+            </div>
+            <div class="filter-settings wrapper-vertical">
+              <div class="filters-shape wrapper-horizontal">
+                <h4 class="h4">Форма</h4>
+                <div class="wrapper-horizontal">
+                  <button
+                    data-filter="шар"
+                    class="button button-shape ball"
+                  ></button>
+                  <button
+                    data-filter="колокольчик"
+                    class="button button-shape bell"
+                  ></button>
+                  <button
+                    data-filter="шишка"
+                    class="button button-shape cone"
+                  ></button>
+                  <button
+                    data-filter="снежинка"
+                    class="button button-shape snowflake"
+                  ></button>
+                  <button
+                    data-filter="фигурка"
+                    class="button button-shape toy"
+                  ></button>
+                </div>
+              </div>
+              <div class="filters-amount">
+                <h4 class="h4">Количество экземпляров</h4>
+                <div class="slider">
+                  <div class="min-amount-mark mark"></div>
+                  <div class="slider-container">
+                    <div id="range-slider-amount"></div>
+                  </div>
+                  <div class="max-amount-mark mark"></div>
+                </div>
+              </div>
+              <div class="filters-year">
+                <h4 class="h4">Год приобретения</h4>
+                <div class="slider">
+                  <div class="min-year-mark mark"></div>
+                  <div class="slider-container">
+                    <div id="range-slider-year"></div>
+                  </div>
+                  <div class="max-year-mark mark"></div>
+                </div>
+              </div>
+
+              <div class="filters-color wrapper-horizontal">
+                <h4 class="h4">Цвет</h4>
+                <div class="wrapper-horizontal">
+                  <button data-filter="белый" class="button-color white">
+                    <span class="span"></span>
+                  </button>
+                  <button data-filter="желтый" class="button-color yellow">
+                    <span class="span"></span>
+                  </button>
+                  <button data-filter="красный" class="button-color red">
+                    <span class="span"></span>
+                  </button>
+                  <button data-filter="синий" class="button-color blue">
+                    <span class="span"></span>
+                  </button>
+                  <button data-filter="зелёный" class="button-color green">
+                    <span class="span"></span>
+                  </button>
+                </div>
+              </div>
+              <div class="filters-size wrapper-horizontal">
+                <h4 class="h4">Размер</h4>
+                <button data-filter="большой" class="button-size big"></button>
+                <button
+                  data-filter="средний"
+                  class="button-size medium"
+                ></button>
+                <button data-filter="малый" class="button-size small"></button>
+              </div>
+              <div class="filters-favorite wrapper-horizontal">
+                <h4 class="h4">Любимые</h4>
+                <input
+                  class="input-favorite"
+                  type="checkbox"
+                  name="favorite"
+                  id="favorite"
+                />
+                <label class="label-favorite" for="favorite"
+                  ><span></span
+                ></label>
+              </div>
+              <button class="reset filters-reset">Сбросить фильтры</button>
+              <button class="reset settings-reset">
+                Сбросить сохраненные значения
+              </button>
+            </div>
+          </div>
+          <div class="cards-section">
+            <h2 class="h2">Игрушки</h2>
+            <div class="cards">
+              <p class="no-by-filters hidden">
+                Извините, совпадений не обнаружено
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="tree-page section hidden">
+        <div class="blur wrapper-horizontal">
+          <h2 class="h2 hidden">Нарядим елку!</h2>
+
+          <div class="left-part">
+            <h2 class="h2">Выбери елку</h2>
+            <div class="trees-wrapper wrapper-horizontal"></div>
+            <h2 class="h2">Выбери фон</h2>
+            <div class="backgrounds-wrapper wrapper-horizontal"></div>
+            <h2 class="h2">Выбери гирлянду</h2>
+            <div class="lights-wrapper wrapper-horizontal">
+              <button class="color-btn white-btn" data-color="white"></button>
+              <button class="color-btn blue-btn" data-color="blue"></button>
+              <button class="color-btn yellow-btn" data-color="yellow"></button>
+              <button class="color-btn green-btn" data-color="green"></button>
+              <button class="color-btn red-btn" data-color="red"></button>
+              <button
+                class="color-btn multicolor-btn"
+                data-color="multicolor"
+              ></button>
+              <button class="on-off-lights">Вкл</button>
+            </div>
+          </div>
+          <div class="central-part">
+            <div class="tree-background-image">
+              <div class="lights"></div>
+              <div class="tree-container">
+                <img
+                  src="./assets/tree/1.png"
+                  alt=""
+                  class="tree-pattern"
+                  usemap="#treemap"
+                />
+                <map class="treemap" name="treemap">
+                  <area
+                    class="areamap"
+                    target=""
+                    alt=""
+                    title=""
+                    href=""
+                    coords="174,687,152,671,83,669,33,639,21,600,32,565,46,549,48,525,68,491,66,453,86,422,104,386,109,369,110,349,126,313,142,276,154,240,157,210,173,182,181,149,192,118,205,98,212,72,226,38,240,6,254,38,269,50,283,70,297,101,317,127,332,167,349,198,344,233,361,253,371,281,391,310,373,330,402,346,416,363,415,390,432,408,424,428,447,452,449,481,451,507,465,528,472,546,484,568,486,596,456,611,466,633,470,655,429,671,348,675,312,690,232,680"
+                    ;
+                    shape="poly"
+                  />
+                </map>
+              </div>
+            </div>
+          </div>
+          <div class="right-part">
+            <h2 class="h2">Игрушки</h2>
+            <div class="ornaments-wrapper wrapper-horizontal"></div>
+            <p class="textcolor"></p>
+            <h2 class="h2 hidden">Вы нарядили</h2>
+            <div class="previous-trees wrapper-horizontal hidden"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer footer-section">
+      <li class="li-footer">
+        <a
+          class="footer-link text-body"
+          href="https://github.com/Dairin-dei"
+          target="_blank"
+          >@Dairin-dei</a
+        >
+      </li>
+      <li class="li-footer text-body">2021</li>
+      <li class="li-footer">
+        <a class="text-body" href="https://rs.school/js/" target="_blank"
+          ><img
+            src="../assets/svg/rs_school_js.svg"
+            alt="school logo"
+            width="50"
+        /></a>
+      </li>
+    </footer>
+
+    <template class="template-card">
+      <div class="card" data-num="1">
+        <h4 class="card-name card-title"></h4>
+        <img src="" alt="decoration" class="card-image" />
+        <div class="description wrapper-vertical">
+          <p class="card-amount card-description"></p>
+          <p class="card-num card-description hidden"></p>
+          <p class="card-year card-description"></p>
+          <p class="card-shape card-description"></p>
+          <p class="card-color card-description"></p>
+          <p class="card-size card-description"></p>
+          <p class="card-favorite card-description"></p>
+        </div>
+        <div class="card-ribbon"></div>
+      </div>
+    </template>
+    <template class="template-decoration-card">
+      <div class="wrapper">
+        <div class="decoration-card" data-num="0">
+          <p class="decoration-card-num hidden"></p>
+          <img src="" alt="" class="decoration-card-image" data-num="0" />
+          <div class="decoration-card-count-wrapper hidden">
+            <span class="decoration-card-count"></span>
+          </div>
+        </div>
+      </div>
+    </template>
+    <div class="blur-popup hidden">
+      <div class="popup">
+        <p class="popup-text"></p>
+      </div>
+    </div>
+  </body>
+</html>
