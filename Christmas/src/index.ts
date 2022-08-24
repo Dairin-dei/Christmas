@@ -27,6 +27,9 @@ export class App {
     const buttonTree: HTMLElement = document.querySelector(
       ".button-tree"
     ) as HTMLElement;
+    const buttonHelp: HTMLElement = document.querySelector(
+      ".button-help"
+    ) as HTMLElement;
     const buttonStart: HTMLElement = document.querySelector(
       ".button-start"
     ) as HTMLElement;
@@ -39,6 +42,9 @@ export class App {
     });
     buttonTree.addEventListener("click", () => {
       this.switchPages("tree-page", "button-tree");
+    });
+    buttonHelp.addEventListener("click", () => {
+      this.switchPages("help-page", "button-help");
     });
 
     buttonStart.addEventListener("click", () => {
