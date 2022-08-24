@@ -10,10 +10,11 @@
 @import "./decorationCard.css";
 @import "./lights.css";
 @import "./snowflakes.css";
+@import "./helpPage.css";
 
 body {
   box-sizing: border-box;
-  min-height: 100vh;
+  max-height: 100vh;
   display: flex;
   flex-direction: column;
   font-family: "Open Sans";
@@ -29,6 +30,7 @@ body {
   background-image: url(../assets/backgroundg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  
 }
 
 .hidden {

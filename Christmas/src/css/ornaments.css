@@ -213,6 +213,8 @@
   flex-wrap: wrap;
   column-gap: 1rem;
   row-gap: 1rem;
+  max-height: calc(100vh - 11rem);
+  overflow-y: auto;
 }
 
 .no-by-filters {
